@@ -1,0 +1,22 @@
+.hero {
+  /* background-color: #102e42; */
+  background-color: #0c2231;
+  color: #fff;
+  min-height: 95vh;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero--container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.cta--link {
+  color: #fff;
+}

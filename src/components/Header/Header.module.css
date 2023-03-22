@@ -1,0 +1,29 @@
+.header {
+  background-color: #081620;
+  /* background-color: #0c2231; */
+  color: #fff;
+  padding: 2rem;
+}
+
+.header--container {
+  justify-content: space-between;
+}
+
+.header--container,
+.header--nav,
+.header--cta {
+  display: flex;
+  align-items: center;
+}
+
+.header--nav,
+.header--cta {
+  justify-content: center;
+  gap: 2rem;
+}
+
+.resume-btn-link {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 1rem;
+}

@@ -1,0 +1,32 @@
+.lang-select-box {
+  position: relative;
+}
+
+.lang-select-selector,
+.lang-select-dropdown-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.language-flag {
+  width: 44px;
+  height: 22px;
+}
+
+.lang-select-selector {
+  border: 1px solid #fff;
+  gap: 0.5rem;
+}
+
+.lang-select-dropdown-box {
+  list-style: none;
+  position: absolute;
+  flex-direction: column;
+  border: 1px solid #fff;
+  gap: 1rem;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #081620;
+}
