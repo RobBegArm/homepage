@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 15vh;
 }
 
 .hero--container {
@@ -19,4 +20,8 @@
 
 .cta--link {
   color: #fff;
+  border: 1px solid #fff;
+  padding: 1rem;
+  max-width: 30rem;
+  text-align: center;
 }

@@ -1,5 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useDispatch } from "react-redux";
+import { languageActions } from "../store/languageSlice";
 
 import classes from "./Homepage.module.css";
 import Footer from "../components/Footer/Footer";
@@ -15,6 +17,12 @@ const Homepage = (props) => {
       ? "hidden"
       : "inherit";
   }, [menuIsOpen]);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(languageActions.setLanguage(props.activeLang));
+  }, []);
 
   const changeMenuStateHandler = () => {
     setMenuIsOPen(!menuIsOpen);
