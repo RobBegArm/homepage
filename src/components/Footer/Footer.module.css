@@ -9,11 +9,11 @@ footer,
 
 footer {
   background-color: #0c2231;
-  color: #fff;
+  color: #eee;
   flex-direction: column;
   overflow: hidden;
   padding: 4rem;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #eee;
 }
 
 .social-container {
