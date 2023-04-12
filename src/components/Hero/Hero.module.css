@@ -10,7 +10,26 @@
   padding-bottom: 15vh;
 }
 
+.hero--bg {
+  /* The image used */
+  background-image: url("/public/images/hero/bg.jpg");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .hero--container {
+  padding: 2rem;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 2rem;

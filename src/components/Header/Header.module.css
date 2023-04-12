@@ -1,8 +1,7 @@
 .header {
   background-color: #081620;
   /* background-color: #0c2231; */
-  color: #fff;
-  padding: 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .header--container {
@@ -22,8 +21,78 @@
   gap: 2rem;
 }
 
+.header--nav a,
 .resume-btn-link {
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.resume-btn-link {
+  font-size: 1.6rem;
+}
+
+.header--nav a,
+.header,
+.header--cta a {
+  color: #20c997;
+}
+
+.header--nav a:active,
+.header--nav a:hover,
+.header--cta a:active,
+.header--cta a:hover {
+  color: #0ca678;
+}
+
+.resume-btn-link {
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #20c997 0px 0px 0px 2px;
+  padding: 0.8rem;
+}
+
+.resume-btn-link:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #0ca678 0px 0px 0px 2px;
+}
+
+.logo-image {
+  width: 60px;
+}
+
+.btn--menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #20c997;
+  padding: 0.5rem;
+  font-size: 3rem;
+  border-radius: 4px;
+  color: #010d09;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--menu:hover {
+  cursor: pointer;
+  background-color: #0ca678;
+}
+
+@media (max-width: 62em) {
+  .header--nav,
+  .header--cta {
+    display: none;
+  }
+
+  .header--container {
+    padding: 0 2rem;
+  }
+
+  .btn--menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 38em) {
+  .header {
+    padding: 0.5rem;
+  }
 }

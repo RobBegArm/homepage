@@ -15,8 +15,8 @@ const Hero = () => {
   };
   const heroH2 = {
     en: "I am a passionate frontend developer.",
-    ru: "Я фронтенд-разработчик.",
-    arm: "Ես frontend ծրագրավորող եմ:",
+    ru: "Я веб разработчик.",
+    arm: "Ես վեբ ծրագրավորող եմ:",
   };
   const heroH3 = {
     en: "I have experience in designing, building, and deploying real-world websites. I create engaging, responsive, and user-friendly interfaces. I am open for freelance opportunities.",
@@ -31,6 +31,7 @@ const Hero = () => {
 
   return (
     <div className={classes["hero"]}>
+      {/* <div className={classes["hero--bg"]}></div> */}
       <div className={classes["hero--container"]}>
         <p>{heroP[lang]}</p>
         <h1>{heroH1[lang]}</h1>

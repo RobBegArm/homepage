@@ -37,6 +37,12 @@ body {
   font-size: 2rem;
 }
 
+/* FONTS */
+
+.headline {
+  font-size: 3.6rem;
+}
+
 /* LISTS */
 
 .list {
@@ -62,6 +68,22 @@ body {
   margin: 0 auto;
   padding: 0 3.2rem;
   max-width: 130rem;
+}
+
+/* BUTTONS */
+
+.btn {
+  border: none;
+  font: inherit;
+  text-decoration: none;
+}
+
+/* UTIL */
+
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
 /* SCROLLBAR */

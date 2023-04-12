@@ -1,18 +1,14 @@
-import classes from "./HeaderNavLink.module.css";
 import { SmoothScrollTo } from "../../../hooks/CustomHooks";
 
-import { useSelector } from "react-redux";
-
 const HeaderNavLink = (props) => {
-  const lang = useSelector((state) => state.language.activeLanguage);
-
   return (
     <a
       href={props.href}
       onClick={(e) => SmoothScrollTo(e, props.href)}
-      className={`${classes["header--link"]} link`}
+      className={"link"}
     >
-      {props.title[lang]}
+      {props.title && <p>{props.title}</p>}
+      {props.children}
     </a>
   );
 };

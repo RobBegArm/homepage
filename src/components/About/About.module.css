@@ -1,0 +1,46 @@
+.about,
+.about--image-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  /* background-color: #102e42; */
+  background-color: #0c2231;
+  color: #fff;
+  flex-direction: column;
+  gap: 10rem;
+  padding: 6rem;
+}
+
+.about--container {
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about--description-box,
+.about--text-box {
+  flex-direction: column;
+  gap: 4rem;
+  display: flex;
+  padding: 4rem 2rem;
+  justify-content: space-around;
+  text-align: start;
+}
+
+.about-me-img {
+  border-radius: 8px;
+  /* box-shadow: rgba(255, 255, 255, 0.2) 0px 5px 15px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 15px;
+  width: 100%;
+}
+
+.about--image-box {
+  padding: 3rem;
+}
+
+.about--education-box {
+  text-align: center;
+}
