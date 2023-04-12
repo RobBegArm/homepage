@@ -8,12 +8,12 @@ footer,
 }
 
 footer {
-  background-color: #0c2231;
-  color: #eee;
+  background-color: var(--blue-00);
+  color: var(--teal-5);
   flex-direction: column;
   overflow: hidden;
   padding: 4rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--teal-5);
 }
 
 .social-container {
@@ -23,4 +23,8 @@ footer {
 
 .social-link {
   color: inherit;
+}
+
+.social-link:hover {
+  color: var(--teal-7);
 }

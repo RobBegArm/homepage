@@ -1,7 +1,6 @@
 .hero {
   position: relative;
-  background-color: #0c2231;
-  color: #fff;
+  background-color: var(--blue-00);
   min-height: 95vh;
   height: 95vh;
   display: flex;
@@ -39,40 +38,40 @@
 }
 
 .cta--link {
-  color: #20c997;
+  color: var(--teal-5);
   border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #20c997 0px 0px 0px 2px;
+  box-shadow: var(--teal-5) 0px 0px 0px 2px;
   padding: 2rem 3rem;
   max-width: 30rem;
   text-align: center;
   align-self: center;
-  background-color: #0c2231;
+  background-color: var(--blue-00);
 }
 
 .cta--link:hover,
 .cta--link:active {
-  color: #0ca678;
+  color: var(--teal-7);
   background-color: #0b1f2c;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #0ca678 0px 0px 0px 2px;
+  box-shadow: var(--teal-7) 0px 0px 0px 4px;
 }
 
 .hero--p1 {
-  color: #e6fcf5;
+  color: var(--teal-0);
 }
 
 .hero h1 {
-  color: #0ca678;
+  color: var(--teal-7);
   font-size: 5rem;
 }
 
 .hero--p2 {
-  color: #20c997;
+  color: var(--teal-5);
   font-size: 2.4rem;
   margin-bottom: 2rem;
 }
 
 .hero--p3 {
-  color: #c3fae8;
+  color: var(--teal-1);
   margin-bottom: 4rem;
 }
 

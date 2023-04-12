@@ -12,6 +12,7 @@ const Footer = () => {
           target={"_blank"}
           rel={"noreferrer"}
           className={`link ${classes["social-link"]}`}
+          title="LinkedIn"
         >
           <AiFillLinkedin />
         </a>
@@ -20,6 +21,7 @@ const Footer = () => {
           target={"_blank"}
           rel={"noreferrer"}
           className={`link ${classes["social-link"]}`}
+          title="GitHub"
         >
           <AiOutlineGithub />
         </a>

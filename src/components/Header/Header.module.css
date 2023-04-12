@@ -1,5 +1,5 @@
 .header {
-  background-color: #081620;
+  background-color: var(--blue-01);
   padding: 0.5rem 2rem;
   z-index: 999;
 }
@@ -35,24 +35,24 @@
 .header--nav a,
 .header,
 .header--cta a {
-  color: #20c997;
+  color: var(--teal-5);
 }
 
 .header--nav a:active,
 .header--nav a:hover,
 .header--cta a:active,
 .header--cta a:hover {
-  color: #0ca678;
+  color: var(--teal-7);
 }
 
 .resume-btn-link {
   border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #20c997 0px 0px 0px 2px;
+  box-shadow: var(--teal-5) 0px 0px 0px 2px;
   padding: 0.8rem;
 }
 
 .resume-btn-link:hover {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #0ca678 0px 0px 0px 2px;
+  box-shadow: var(--teal-7) 0px 0px 0px 3px;
 }
 
 .logo-image {
@@ -63,7 +63,7 @@
   display: none;
   align-items: center;
   justify-content: center;
-  background-color: #20c997;
+  background-color: var(--teal-5);
   padding: 0.5rem;
   font-size: 3rem;
   border-radius: 4px;
@@ -73,7 +73,7 @@
 
 .btn--menu:hover {
   cursor: pointer;
-  background-color: #0ca678;
+  background-color: var(--teal-7);
 }
 
 @media (max-width: 62em) {

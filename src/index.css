@@ -6,18 +6,20 @@
   box-sizing: border-box;
 }
 
-*:focus {
+/* *:focus {
   outline: none;
-  /* box-shadow: 0 0 0 0.8rem rgba(34, 159, 161, 0.5) !important; */
-}
+  box-shadow: 0 0 0 0.4rem rgb(12, 166, 120, 0.4) !important;
+} */
 
 :root {
   /*Primary Color*/
-  /* --main-color: #229fa1; */
-  /*Tints*/
-  /* --tint-20: #4eb2b4; */
-  /*Shades*/
-  /* --shade-10: #1f8f91;*/
+  --teal-0: #e6fcf5;
+  --teal-1: #c3fae8;
+  --teal-5: #20c997;
+  --teal-7: #0ca678;
+  /*Blue*/
+  --blue-00: #0c2231;
+  --blue-01: #081620;
 }
 
 html {
