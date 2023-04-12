@@ -1,7 +1,7 @@
 .header {
   background-color: #081620;
-  /* background-color: #0c2231; */
   padding: 0.5rem 2rem;
+  z-index: 999;
 }
 
 .header--container {
