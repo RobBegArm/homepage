@@ -2,11 +2,11 @@ import { Fragment, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { languageActions } from "../store/languageSlice";
 
-// import classes from "./Homepage.module.css";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
+import Experience from "../components/Experience/Experience";
 
 const Homepage = (props) => {
   const [menuIsOpen, setMenuIsOPen] = useState(false);
@@ -42,6 +42,7 @@ const Homepage = (props) => {
       <main>
         <Hero />
         <About />
+        <Experience />
       </main>
       <Footer />
     </Fragment>

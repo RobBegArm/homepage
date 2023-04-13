@@ -12,9 +12,9 @@ const About = () => {
     arm: "Իմ մասին",
   };
   const aboutText1 = {
-    en: "Hello! I am a passionate web developer based in Tallinn, Estonia with extensive experience in designing, building, and deploying real-world websites. I specialize in using React JS, JavaScript (ES6), HTML5, and CSS3 to create engaging and responsive websites.",
-    ru: "Привет! Я веб разработчик, базирующийся в Таллинне, Эстонии, с большим опытом проектирования, создания и развертывания реальных веб-сайтов. Я специализируюсь на использовании React JS, JavaScript (ES6), HTML5 и CSS3 для создания привлекательных и отзывчивых веб-сайтов. ",
-    arm: "Բարեւ Ձեզ! Ես վեբ ծրագրավորող եմ, որը հիմնված է Տալլինում, Էստոնիա, որն ունի իրական աշխարհի կայքերի նախագծման, կառուցման և տեղադրման մեծ փորձ: Ես մասնագիտացած եմ React JS-ի, JavaScript-ի (ES6), HTML5-ի և CSS3-ի օգտագործման մեջ՝ գրավիչ և արձագանքող կայքեր ստեղծելու համար:",
+    en: "I am a passionate web developer based in Tallinn, Estonia with extensive experience in designing, building, and deploying modern websites. I specialize in using React JS, JavaScript (ES6), HTML5, and CSS3 to create engaging and responsive websites.",
+    ru: "Я веб разработчик, базирующийся в Таллинне, Эстонии, с большим опытом проектирования, создания и развертывания современный веб-сайтов. Я специализируюсь на использовании React JS, JavaScript (ES6), HTML5 и CSS3 для создания привлекательных и отзывчивых веб-сайтов. ",
+    arm: "Ես վեբ ծրագրավորող եմ, որը հիմնված է Տալլինում, Էստոնիա, որն ունի ժամանակակից կայքերի նախագծման, կառուցման և տեղադրման մեծ փորձ: Ես մասնագիտացած եմ React JS-ի, JavaScript-ի (ES6), HTML5-ի և CSS3-ի օգտագործման մեջ՝ գրավիչ և արձագանքող կայքեր ստեղծելու համար:",
   };
   const aboutText2 = {
     en: "With a passion for staying up-to-date with the latest web development trends and technologies, I enjoy creating user-friendly interfaces that provide a seamless user experience. I take pride in my work and am committed to delivering high-quality websites that exceed my clients' expectations.",
@@ -82,6 +82,7 @@ const About = () => {
             <h3>{educationHeadline[lang]}</h3>
             <DropdownTab
               imgName="taltech_logo"
+              imgFolder="about"
               imgAlt="TalTech - Tallinn University of Technology"
               mainHeadline="TalTech"
               mainDescription={degree1Name[lang]}
@@ -92,6 +93,7 @@ const About = () => {
             />
             <DropdownTab
               imgName="ysu_logo"
+              imgFolder="about"
               imgAlt="YSU - Yerevan State University"
               mainHeadline="YSU"
               mainDescription={degree2Name[lang]}

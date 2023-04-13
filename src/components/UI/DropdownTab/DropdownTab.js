@@ -1,6 +1,7 @@
 import classes from "./DropdownTab.module.css";
 import { useState } from "react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import { GoPrimitiveDot } from "react-icons/go";
 import Picture from "../Picture/Picture";
 
 const DropdownTab = (props) => {
@@ -23,7 +24,7 @@ const DropdownTab = (props) => {
         )}
         <Picture
           imgName={props.imgName}
-          imgFolder="about"
+          imgFolder={props.imgFolder}
           imgAlt={props.imgAlt}
           imgClasses={classes["about-logo"]}
         />
@@ -42,9 +43,31 @@ const DropdownTab = (props) => {
         </p>
         <p>{props.dropdownLocation}</p>
         <p className={classes["dropdown-years"]}>{props.dropdownYears}</p>
-        <p className={classes["dropdown-description"]}>
-          {props.dropdownDescription}
-        </p>
+        {props.dropdownDescription && (
+          <p className={classes["dropdown-description"]}>
+            {props.dropdownDescription}
+          </p>
+        )}
+        {props.skill1 && (
+          <ul>
+            <li>
+              <GoPrimitiveDot className={classes["li-icon"]} />
+              {props.skill1}
+            </li>
+            {props.skill2 && (
+              <li>
+                <GoPrimitiveDot className={classes["li-icon"]} />
+                {props.skill2}
+              </li>
+            )}
+            {props.skill3 && (
+              <li>
+                <GoPrimitiveDot className={classes["li-icon"]} />
+                {props.skill3}
+              </li>
+            )}
+          </ul>
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,27 @@
+.experience {
+  align-items: center;
+  background-color: var(--blue-00);
+  color: var(--teal-0);
+  flex-direction: column;
+  gap: 8rem;
+  padding: 9rem 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.prof-exp--container h3 {
+  padding-bottom: 3rem;
+  color: var(--teal-5);
+}
+
+.prof-exp--container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 44em) {
+  .experience {
+    padding: 9rem 0.5rem;
+  }
+}

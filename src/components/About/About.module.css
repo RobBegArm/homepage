@@ -29,6 +29,10 @@
   text-align: start;
 }
 
+.about--text-box p {
+  line-height: 1.3;
+}
+
 .about--image-box {
   padding: 3rem;
   align-items: flex-start;
