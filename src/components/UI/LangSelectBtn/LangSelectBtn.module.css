@@ -30,11 +30,21 @@
 }
 
 .lang-select-dropdown-box {
+  display: flex;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
   list-style: none;
   position: absolute;
   flex-direction: column;
-  gap: 1rem;
   z-index: 1;
   background-color: #243846;
   box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+}
+
+.active {
+  gap: 1rem;
+  padding: 1rem;
+  max-height: 60rem;
 }

@@ -24,8 +24,9 @@ const LangSelectBtn = () => {
         {dropMenuOpen ? <BiChevronUpCircle /> : <BiChevronDownCircle />}
       </div>
       <ul
-        className={classes["lang-select-dropdown-box"]}
-        style={{ display: dropMenuOpen ? "flex" : "none" }}
+        className={`${classes["lang-select-dropdown-box"]} ${
+          dropMenuOpen ? classes["active"] : ""
+        }`}
       >
         {lang !== "en" && (
           <li key={"lang-select-en"}>
