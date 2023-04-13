@@ -35,7 +35,6 @@ body {
   font-family: "Open Sans", sans-serif, "Aleo", "Times New Roman", serif;
   line-height: 1.1;
   font-weight: 400;
-  color: #222;
   font-size: 2rem;
 }
 
@@ -43,6 +42,7 @@ body {
 
 .headline {
   font-size: 3.6rem;
+  color: var(--teal-5);
 }
 
 /* LISTS */
@@ -86,6 +86,11 @@ body {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+}
+
+.shadowed-image {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+  border-radius: 5px;
 }
 
 /* SCROLLBAR */

@@ -1,6 +1,9 @@
 import classes from "./About.module.css";
 import { useSelector } from "react-redux";
 
+import DropdownTab from "../UI/DropdownTab/DropdownTab";
+import Picture from "../UI/Picture/Picture";
+
 const About = () => {
   const lang = useSelector((state) => state.language.activeLanguage);
   const aboutHeadline = {
@@ -23,10 +26,47 @@ const About = () => {
     ru: "Образование",
     arm: "Կրթություն",
   };
-  const educationText = {
-    en: "Drop Down Box, that can be open with details (list)",
-    ru: "У меня есть образование.",
-    arm: "Ես կրթություն ունեմ.",
+  /*DEGREE 1*/
+  const degree1Name = {
+    en: "Master's Degree",
+    ru: "Магистр",
+    arm: "Մագիստրոս",
+  };
+  const degree1UniFullName = {
+    en: "Tallinn University of Technology",
+    ru: "Таллиннский технический университет",
+    arm: "Տալլինի տեխնոլոգիական համալսարան",
+  };
+  const degree1Location = {
+    en: "Estonia",
+    ru: "Эстония",
+    arm: "Էստոնիա",
+  };
+  const degree1Description = {
+    en: "Master of Science in Engineering",
+    ru: "Магистр технических наук",
+    arm: "Ինժեներական մագիստրոս",
+  };
+  /*DEGREE 2*/
+  const degree2Name = {
+    en: "Bachelor's Degree",
+    ru: "Бакалавр",
+    arm: "Բակալավր",
+  };
+  const degree2UniFullName = {
+    en: "Yerevan State University",
+    ru: "Ереванский государственный университет",
+    arm: "Երևանի պետական համալսարան",
+  };
+  const degree2Location = {
+    en: "Armenia",
+    ru: "Армения",
+    arm: "Հայաստան",
+  };
+  const degree2Description = {
+    en: "Bachelor of Science in Physics",
+    ru: "Бакалавр физики",
+    arm: "ֆիզիկայի բակալավր",
   };
 
   return (
@@ -40,15 +80,34 @@ const About = () => {
           </div>
           <div className={classes["about--education-box"]}>
             <h3>{educationHeadline[lang]}</h3>
-            <p>{educationText[lang]}</p>
+            <DropdownTab
+              imgName="taltech_logo"
+              imgAlt="TalTech - Tallinn University of Technology"
+              mainHeadline="TalTech"
+              mainDescription={degree1Name[lang]}
+              dropdownHeadline={degree1UniFullName[lang]}
+              dropdownLocation={degree1Location[lang]}
+              dropdownYears="2018-2020"
+              dropdownDescription={degree1Description[lang]}
+            />
+            <DropdownTab
+              imgName="ysu_logo"
+              imgAlt="YSU - Yerevan State University"
+              mainHeadline="YSU"
+              mainDescription={degree2Name[lang]}
+              dropdownHeadline={degree2UniFullName[lang]}
+              dropdownLocation={degree2Location[lang]}
+              dropdownYears="2012-2016"
+              dropdownDescription={degree2Description[lang]}
+            />
           </div>
         </div>
         <div className={classes["about--image-box"]}>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/about/about_image.jpg`}
-            alt={`Robert Beglaryan`}
-            className={classes["about-me-img"]}
-            title={"Robert Beglaryan"}
+          <Picture
+            imgName="robert_img"
+            imgFolder="about"
+            imgAlt="Robert Beglaryan - Web Developer"
+            imgClasses={classes["about-me-img"]}
           />
         </div>
       </div>

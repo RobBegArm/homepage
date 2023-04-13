@@ -1,0 +1,99 @@
+.dropdown-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-tab {
+  display: grid;
+  grid-template-columns: 2fr 1fr 8fr 5fr;
+  align-items: center;
+}
+
+.about-logo {
+  height: 4rem;
+  width: 5rem;
+}
+
+.dropdown-tab {
+  padding: 1.5rem 2.5rem;
+  border-radius: 8px;
+  background-color: var(--blue-01);
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dropdown-headline {
+  text-align: center;
+}
+
+.dropdown-headline,
+.dropdown-top-headline {
+  font-weight: 500;
+  font-size: 2.2rem;
+}
+
+.dropdown-top-description {
+  text-align: end;
+}
+
+.dropdown-years {
+  font-size: 1.6rem;
+  color: #bbb;
+}
+
+.main-tab picture {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.chevron-up,
+.chevron-down {
+  color: var(--teal-5);
+  font-size: 2.4rem;
+}
+
+.chevron-up:hover,
+.chevron-up:active,
+.chevron-down:hover,
+.chevron-down:active {
+  color: var(--teal-7);
+  cursor: pointer;
+}
+
+.dropdown-content,
+.main-tab {
+  width: 100%;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.dropdown-content-open {
+  display: flex;
+}
+
+@media (max-width: 44em) {
+  .dropdown-tab {
+    padding: 1.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .dropdown-headline {
+    font-size: 2rem;
+  }
+
+  .dropdown-top-description {
+    font-size: 1.6rem;
+  }
+
+  .about-logo {
+    height: 3rem;
+  }
+}

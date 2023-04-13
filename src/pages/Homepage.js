@@ -6,7 +6,7 @@ import { languageActions } from "../store/languageSlice";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
-// import About from "../components/About/About";
+import About from "../components/About/About";
 
 const Homepage = (props) => {
   const [menuIsOpen, setMenuIsOPen] = useState(false);
@@ -32,8 +32,6 @@ const Homepage = (props) => {
     setMenuIsOPen(false);
   };
 
-  /* SETUP THE VALUES */
-
   return (
     <Fragment>
       <Header
@@ -43,7 +41,7 @@ const Homepage = (props) => {
       />
       <main>
         <Hero />
-        {/* <About /> */}
+        <About />
       </main>
       <Footer />
     </Fragment>
