@@ -2,7 +2,7 @@ import classes from "./Experience.module.css";
 import { useSelector } from "react-redux";
 
 import DropdownTab from "../UI/DropdownTab/DropdownTab";
-// import Picture from "../UI/Picture/Picture";
+import Picture from "../UI/Picture/Picture";
 
 const Experience = () => {
   const lang = useSelector((state) => state.language.activeLanguage);
@@ -121,6 +121,14 @@ const Experience = () => {
     ),
   };
 
+  /* Headline */
+
+  const techHeadline = {
+    en: "Technologies",
+    ru: "Технологии",
+    arm: "Տեխնոլոգիաներ",
+  };
+
   return (
     <div className={classes["experience"]} id="experience">
       <h2 className="headline">{experienceHeadline[lang]}</h2>
@@ -151,6 +159,100 @@ const Experience = () => {
           skill1={job2skill1[lang]}
           skill2={job2skill2[lang]}
         />
+      </div>
+      <h3>{techHeadline[lang]}</h3>
+      <div className={classes["skills--container"]}>
+        <div className={classes["skill-category-box"]}>
+          <h4>Frontend</h4>
+          <ul>
+            <li key={`tech_react`}>
+              <Picture
+                imgName="react"
+                imgFolder="experience"
+                imgAlt="React JS"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>React JS</p>
+            </li>
+            <li key={`tech_js`}>
+              <Picture
+                imgName="js"
+                imgFolder="experience"
+                imgAlt="JavaScript"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>JavaScript</p>
+            </li>
+            <li key={`tech_typescript`}>
+              <Picture
+                imgName="typescript"
+                imgFolder="experience"
+                imgAlt="TypeScript"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>TypeScript</p>
+            </li>
+            <li key={`tech_html`}>
+              <Picture
+                imgName="html5"
+                imgFolder="experience"
+                imgAlt="HTML5"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>HTML5</p>
+            </li>
+            <li key={`tech_css`}>
+              <Picture
+                imgName="css3"
+                imgFolder="experience"
+                imgAlt="CSS3"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>CSS3</p>
+            </li>
+          </ul>
+        </div>
+        <div className={classes["skill-category-box"]}>
+          <h4>Backend</h4>
+          <ul>
+            <li key={`tech_java`}>
+              <Picture
+                imgName="java"
+                imgFolder="experience"
+                imgAlt="Java"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>Java</p>
+            </li>
+            <li key={`tech_springboot`}>
+              <Picture
+                imgName="spring"
+                imgFolder="experience"
+                imgAlt="Spring Boot"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>Spring Boot</p>
+            </li>
+            <li key={`tech_mysql`}>
+              <Picture
+                imgName="mysql"
+                imgFolder="experience"
+                imgAlt="MySQL"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>MySQL</p>
+            </li>
+            <li key={`tech_docker`}>
+              <Picture
+                imgName="docker"
+                imgFolder="experience"
+                imgAlt="Docker"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>Docker</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -5,8 +5,8 @@ const Hero = () => {
   const lang = useSelector((state) => state.language.activeLanguage);
   const heroP1 = {
     en: "Hi, my name is",
-    ru: "Привет, меня зовут",
-    arm: "Բարև, իմ անունն է",
+    ru: "Здравствуйте, меня зовут",
+    arm: "Բարև Ձեզ, իմ անունն է",
   };
   const heroH1 = {
     en: "Robert Beglaryan.",

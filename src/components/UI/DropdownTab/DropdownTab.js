@@ -50,18 +50,18 @@ const DropdownTab = (props) => {
         )}
         {props.skill1 && (
           <ul>
-            <li>
+            <li key={`skill_1_key_${props.imgName}`}>
               <GoPrimitiveDot className={classes["li-icon"]} />
               {props.skill1}
             </li>
             {props.skill2 && (
-              <li>
+              <li key={`skill_2_key_${props.imgName}`}>
                 <GoPrimitiveDot className={classes["li-icon"]} />
                 {props.skill2}
               </li>
             )}
             {props.skill3 && (
-              <li>
+              <li key={`skill_3_key_${props.imgName}`}>
                 <GoPrimitiveDot className={classes["li-icon"]} />
                 {props.skill3}
               </li>

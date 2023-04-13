@@ -34,7 +34,7 @@ const About = () => {
   };
   const degree1UniFullName = {
     en: "Tallinn University of Technology",
-    ru: "Таллиннский технический университет",
+    ru: "Таллиннский технологический университет",
     arm: "Տալլինի տեխնոլոգիական համալսարան",
   };
   const degree1Location = {
@@ -42,9 +42,10 @@ const About = () => {
     ru: "Эстония",
     arm: "Էստոնիա",
   };
+
   const degree1Description = {
     en: "Master of Science in Engineering",
-    ru: "Магистр технических наук",
+    ru: "Магистр инженер",
     arm: "Ինժեներական մագիստրոս",
   };
   /*DEGREE 2*/
