@@ -130,7 +130,10 @@ const Experience = () => {
   };
 
   return (
-    <section className={classes["experience"]} id="experience">
+    <section
+      className={`main-section ${classes["experience"]}`}
+      id="experience"
+    >
       <h2 className="headline">{experienceHeadline[lang]}</h2>
       <div className={classes["prof-exp--container"]}>
         <h3>{profExperienceHeadline[lang]}</h3>

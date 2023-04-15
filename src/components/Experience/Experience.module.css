@@ -1,10 +1,9 @@
 .experience {
   align-items: center;
-  background-color: var(--blue-00);
+  background-color: var(--blue-02);
   color: var(--teal-0);
   flex-direction: column;
   gap: 8rem;
-  padding: 12rem 6rem 0 6rem;
   display: flex;
   justify-content: center;
 }
@@ -67,12 +66,6 @@
 .skill-logo {
   width: 4.5rem;
   height: 4.5rem;
-}
-
-@media (max-width: 44em) {
-  .experience {
-    padding: 12rem 0.5rem 0 0.5rem;
-  }
 }
 
 @media (max-width: 35em) {

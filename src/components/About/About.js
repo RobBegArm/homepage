@@ -71,7 +71,7 @@ const About = () => {
   };
 
   return (
-    <section className={classes["about"]} id="about">
+    <section className={`main-section ${classes["about"]}`} id="about">
       <h2 className="headline">{aboutHeadline[lang]}</h2>
       <div className={classes["about--container"]}>
         <div className={classes["about--description-box"]}>

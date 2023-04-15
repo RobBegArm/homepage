@@ -21,6 +21,7 @@
   /*Blue*/
   --blue-00: #0c2231;
   --blue-01: #081620;
+  --blue-02: #071e33;
 }
 
 html {
@@ -32,7 +33,6 @@ html {
 }
 
 body {
-  /* font-family: "Merriweather", "Aleo", "Times New Roman", serif; */
   font-family: "Open Sans", sans-serif, "Aleo", "Times New Roman", serif;
   line-height: 1.1;
   font-weight: 400;
@@ -71,6 +71,16 @@ body {
   margin: 0 auto;
   padding: 0 3.2rem;
   max-width: 130rem;
+}
+
+.main-section {
+  padding: 6rem;
+}
+
+@media (max-width: 44em) {
+  .main-section {
+    padding: 6rem 0.5rem;
+  }
 }
 
 /* BUTTONS */

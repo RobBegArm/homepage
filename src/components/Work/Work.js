@@ -21,7 +21,7 @@ const Work = () => {
   };
 
   return (
-    <section className={classes["work"]} id="work">
+    <section className={`main-section ${classes["work"]}`} id="work">
       <h2 className="headline">{workHeadline[lang]}</h2>
       <h3>{workHeadline2[lang]}</h3>
       <div className={classes["work--container"]}>

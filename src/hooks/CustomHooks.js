@@ -10,7 +10,13 @@ const SmoothScrollTo = (e, href) => {
   //Scroll to other links
   else if (href !== "#" && href.startsWith("#")) {
     const sectionEl = document.querySelector(href);
-    sectionEl.scrollIntoView({ behavior: "smooth" });
+    const yOffset = -40;
+    const y =
+      sectionEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
   }
 };
 
