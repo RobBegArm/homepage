@@ -46,12 +46,16 @@
   padding: 2rem 3rem;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
-  box-shadow: var(--teal-5) 0px 0px 0px 0px;
+  -webkit-box-shadow: 0px 0px 0px 0px var(--teal-5);
+  -moz-box-shadow: 0px 0px 0px 0px var(--teal-5);
+  box-shadow: 0px 0px 0px 0px var(--teal-5);
 }
 
 .skill-category-box:hover {
   scale: 1.1;
-  box-shadow: var(--teal-7) 0px 0px 0px 4px;
+  -webkit-box-shadow: 0px 0px 0px 4px var(--teal-7);
+  -moz-box-shadow: 0px 0px 0px 4px var(--teal-7);
+  box-shadow: 0px 0px 0px 4px var(--teal-7);
 }
 
 .skill-category-box ul {

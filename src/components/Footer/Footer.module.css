@@ -8,7 +8,7 @@ footer,
 }
 
 footer {
-  background-color: var(--blue-00);
+  background-color: var(--blue-02);
   color: var(--teal-5);
   flex-direction: column;
   overflow: hidden;

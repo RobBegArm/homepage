@@ -57,6 +57,10 @@
 }
 
 @media (max-width: 65em) {
+  .gallery-nav-bullets {
+    gap: 1.5rem;
+  }
+
   .gallery-img-box {
     max-width: 95vw;
     min-height: 60vw;
@@ -80,6 +84,6 @@
   }
 
   .gallery-nav-bullets {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }

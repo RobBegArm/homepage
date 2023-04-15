@@ -32,13 +32,19 @@
   gap: 2rem;
   max-width: 70rem;
   background-color: rgb(8, 22, 32, 0.92);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19),
+    0px 6px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19),
+    0px 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .cta--link {
   color: var(--teal-5);
   border-radius: 6px;
-  box-shadow: var(--teal-5) 0px 0px 0px 2px;
+  -webkit-box-shadow: 0px 0px 0px 2px var(--teal-5);
+  -moz-box-shadow: 0px 0px 0px 2px var(--teal-5);
+  box-shadow: 0px 0px 0px 2px var(--teal-5);
   padding: 2rem 3rem;
   max-width: 30rem;
   text-align: center;
@@ -50,7 +56,9 @@
 .cta--link:active {
   color: var(--teal-7);
   background-color: #0b1f2c;
-  box-shadow: var(--teal-7) 0px 0px 0px 4px;
+  -webkit-box-shadow: 0px 0px 0px 4px var(--teal-7);
+  -moz-box-shadow: 0px 0px 0px 4px var(--teal-7);
+  box-shadow: 0px 0px 0px 4px var(--teal-7);
 }
 
 .hero--p1 {
@@ -72,6 +80,13 @@
   color: var(--teal-1);
   line-height: 1.4;
   margin-bottom: 4rem;
+}
+
+@media (min-width: 125em) {
+  .hero {
+    padding-left: 0;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 81em) {

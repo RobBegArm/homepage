@@ -11,6 +11,7 @@ import About from "../components/About/About";
 import Experience from "../components/Experience/Experience";
 import Work from "../components/Work/Work";
 import MobileNav from "../components/UI/MobileNav/MobileNav";
+import Contact from "../components/Contact/Contact";
 
 const Homepage = (props) => {
   /* SETS ACTIVE LANGUAGE */
@@ -59,6 +60,7 @@ const Homepage = (props) => {
         <About />
         <Experience />
         <Work />
+        <Contact />
       </main>
       <Footer />
     </Fragment>
