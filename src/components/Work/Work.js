@@ -20,6 +20,18 @@ const Work = () => {
     arm: "Իմ գործերից մի քանիսը",
   };
 
+  const projectDescription1 = {
+    en: 'An original website made for the Estonian tech company "E-Pavement" OÜ',
+    ru: 'Оригинальный сайт для эстонской технической компании "E-Pavement" OÜ',
+    arm: "Էստոնական «E-Pavement OÜ» տեխնոլոգիական ընկերության համար ստեղծված օրիգինալ կայք",
+  };
+
+  const projectDescription2 = {
+    en: 'An original website made for "Khnami" palliative care center.',
+    ru: 'Оригинальный сайт для центра паллиативной помощи "Хнами".',
+    arm: "Օրիգինալ կայք՝ պատրաստված «Խնամի» պալիատիվ խնամքի կենտրոնի համար։",
+  };
+
   return (
     <section className={`main-section ${classes["work"]}`} id="work">
       <h2 className="headline">{workHeadline[lang]}</h2>
@@ -39,8 +51,7 @@ const Work = () => {
             </a>
           </div>
           <p className={classes["project--description"]}>
-            An original website made for the Estonian tech company "E-Pavement"
-            OÜ
+            {projectDescription1[lang]}
           </p>
           <Gallery
             imgCount={6}
@@ -63,7 +74,7 @@ const Work = () => {
             </a>
           </div>
           <p className={classes["project--description"]}>
-            An original website made for "Khnami" palliative care center.
+            {projectDescription2[lang]}
           </p>
           <Gallery
             imgCount={5}

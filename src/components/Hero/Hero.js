@@ -1,6 +1,8 @@
 import classes from "./Hero.module.css";
 import { useSelector } from "react-redux";
 
+import { SmoothScrollTo } from "../../hooks/CustomHooks";
+
 const Hero = () => {
   const lang = useSelector((state) => state.language.activeLanguage);
   const heroP1 = {
@@ -38,8 +40,9 @@ const Hero = () => {
         <p className={classes["hero--p2"]}>{heroP2[lang]}</p>
         <p className={classes["hero--p3"]}>{heroP3[lang]}</p>
         <a
-          href="mailto:robbegarm@gmail.com?subject=Mail From Portfolio Website"
+          href="#contact"
           className={`${classes["cta--link"]} link`}
+          onClick={(e) => SmoothScrollTo(e, "#contact")}
         >
           {heroCta[lang]}
         </a>

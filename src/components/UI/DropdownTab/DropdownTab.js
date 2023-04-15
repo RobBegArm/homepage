@@ -12,15 +12,12 @@ const DropdownTab = (props) => {
   };
 
   return (
-    <div className={classes["dropdown-tab"]}>
+    <div className={classes["dropdown-tab"]} onClick={toggleTab}>
       <div className={classes["main-tab"]}>
         {dropdownTabOpen ? (
-          <BsChevronUp onClick={toggleTab} className={classes["chevron-up"]} />
+          <BsChevronUp className={classes["chevron-up"]} />
         ) : (
-          <BsChevronDown
-            onClick={toggleTab}
-            className={classes["chevron-down"]}
-          />
+          <BsChevronDown className={classes["chevron-down"]} />
         )}
         <Picture
           imgName={props.imgName}

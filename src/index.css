@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-/* *:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.4rem rgb(12, 166, 120, 0.4) !important;
-} */
-
 :root {
   /*Primary Color*/
   --teal-0: #e6fcf5;
