@@ -20,4 +20,11 @@ const SmoothScrollTo = (e, href) => {
   }
 };
 
-export { SmoothScrollTo };
+const calculateScrollTop = () => {
+  return window.pageYOffset !== undefined
+    ? window.pageYOffset
+    : (document.documentElement || document.body.parentNode || document.body)
+        .scrollTop;
+};
+
+export { SmoothScrollTo, calculateScrollTop };

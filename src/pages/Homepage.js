@@ -1,6 +1,8 @@
-import { Fragment, useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { Fragment, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { languageActions } from "../store/languageSlice";
+import { menuActions } from "../store/menuSlice";
+import useWindowDimensions from "../hooks/useWindowsDimensions";
 
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
@@ -8,38 +10,50 @@ import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
 import Experience from "../components/Experience/Experience";
 import Work from "../components/Work/Work";
+import MobileNav from "../components/UI/MobileNav/MobileNav";
 
 const Homepage = (props) => {
-  const [menuIsOpen, setMenuIsOPen] = useState(false);
+  /* SETS ACTIVE LANGUAGE */
+  useEffect(() => {
+    dispatch(languageActions.setLanguage(props.activeLang));
+    /* eslint-disable */
+  }, []);
 
+  /* MENU STATE HANDLING*/
+  const menuIsOpen = useSelector((state) => state.menu.menuIsOpen);
+  const dispatch = useDispatch();
+
+  const closeMenuHandler = () => {
+    dispatch(menuActions.closeMenu());
+  };
+
+  /* PREVENT SCROLL IF MENU IS OPEN */
   useEffect(() => {
     document.querySelector("*").style.overflow = menuIsOpen
       ? "hidden"
       : "inherit";
   }, [menuIsOpen]);
 
-  const dispatch = useDispatch();
+  //Calculate Window Width to check if menu should be force closed
+  let needToForceCloseMenu = false;
 
+  const { width } = useWindowDimensions();
+  if (width >= 993 && menuIsOpen) {
+    needToForceCloseMenu = true;
+  }
+
+  //Close Menu If Opening Menu First, and then enlarging the view
   useEffect(() => {
-    dispatch(languageActions.setLanguage(props.activeLang));
-    /* eslint-disable */
-  }, []);
-
-  const changeMenuStateHandler = () => {
-    setMenuIsOPen(!menuIsOpen);
-  };
-
-  const closeMenuHandler = () => {
-    setMenuIsOPen(false);
-  };
+    if (needToForceCloseMenu && menuIsOpen) {
+      closeMenuHandler();
+      needToForceCloseMenu = false;
+    }
+  }, [needToForceCloseMenu]);
 
   return (
     <Fragment>
-      <Header
-        menuIsOpen={menuIsOpen}
-        changeMenuState={changeMenuStateHandler}
-        closeMenu={closeMenuHandler}
-      />
+      <Header />
+      <MobileNav />
       <main>
         <Hero />
         <About />

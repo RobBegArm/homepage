@@ -1,0 +1,39 @@
+.nav--open {
+  display: flex;
+  overflow: hidden;
+  pointer-events: auto !important;
+  z-index: 99;
+}
+
+.nav--close {
+  display: none;
+}
+
+.mobile-nav {
+  background-color: var(--blue-02);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* opacity: 0.9; */
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.mobile-nav a {
+  color: var(--teal-5);
+}
+
+.mobile-nav a:hover,
+.mobile-nav a:active {
+  color: var(--teal-7);
+}

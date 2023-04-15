@@ -77,9 +77,9 @@
   height: 4.5rem;
 }
 
-@media (max-width: 35em) {
+@media (max-width: 38em) {
   .skills--container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 5rem;
   }
 }
