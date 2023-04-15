@@ -71,14 +71,14 @@ const About = () => {
   };
 
   return (
-    <div className={classes["about"]} id="about">
+    <section className={classes["about"]} id="about">
       <h2 className="headline">{aboutHeadline[lang]}</h2>
       <div className={classes["about--container"]}>
         <div className={classes["about--description-box"]}>
-          <div className={classes["about--text-box"]}>
+          <article className={classes["about--text-box"]}>
             <p>{aboutText1[lang]}</p>
             <p>{aboutText2[lang]}</p>
-          </div>
+          </article>
           <div className={classes["about--education-box"]}>
             <h3>{educationHeadline[lang]}</h3>
             <DropdownTab
@@ -114,7 +114,7 @@ const About = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

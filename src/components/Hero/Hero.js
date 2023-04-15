@@ -30,7 +30,7 @@ const Hero = () => {
   };
 
   return (
-    <div className={classes["hero"]}>
+    <section className={classes["hero"]}>
       <div className={classes["hero--bg"]}></div>
       <div className={classes["hero--container"]}>
         <p className={classes["hero--p1"]}>{heroP1[lang]}</p>
@@ -44,7 +44,7 @@ const Hero = () => {
           {heroCta[lang]}
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,0 +1,50 @@
+.work,
+.project,
+.work--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work {
+  background-color: var(--blue-00);
+  color: var(--teal-0);
+  align-items: center;
+  gap: 3rem;
+  padding: 12rem 6rem 0 6rem;
+}
+
+.work h3 {
+  color: var(--teal-3);
+}
+
+.project {
+  padding: 3rem 0;
+  gap: 2rem;
+}
+
+.project-link-box,
+.project--description {
+  padding: 0 2rem;
+}
+
+.project-link {
+  color: var(--teal-3);
+}
+
+.project-link p {
+  display: inline;
+}
+
+.project-link:hover {
+  color: var(--teal-7);
+}
+
+.work--container {
+  padding: 0 2rem;
+}
+
+.link-icon {
+  margin-left: 1rem;
+  font-size: 1.6rem;
+}

@@ -113,10 +113,18 @@ body {
   background: linear-gradient(to left, #8391a6, #536175);
 }
 
-/* 
-#0B7A75
-#CFCFEA
-#3777FF
-#081620
-#F0F3F5
-*/
+/* Animation */
+
+.shade {
+  animation-name: shade;
+  animation-duration: 0.2s;
+}
+
+@keyframes shade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}

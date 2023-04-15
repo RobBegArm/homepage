@@ -130,7 +130,7 @@ const Experience = () => {
   };
 
   return (
-    <div className={classes["experience"]} id="experience">
+    <section className={classes["experience"]} id="experience">
       <h2 className="headline">{experienceHeadline[lang]}</h2>
       <div className={classes["prof-exp--container"]}>
         <h3>{profExperienceHeadline[lang]}</h3>
@@ -173,6 +173,15 @@ const Experience = () => {
                 imgClasses={classes["skill-logo"]}
               />
               <p>React JS</p>
+            </li>
+            <li key={`tech_redux`}>
+              <Picture
+                imgName="redux"
+                imgFolder="experience"
+                imgAlt="Redux"
+                imgClasses={classes["skill-logo"]}
+              />
+              <p>Redux</p>
             </li>
             <li key={`tech_js`}>
               <Picture
@@ -254,7 +263,7 @@ const Experience = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

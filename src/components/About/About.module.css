@@ -10,7 +10,7 @@
   color: var(--teal-0);
   flex-direction: column;
   gap: 8rem;
-  padding: 9rem 6rem;
+  padding: 12rem 6rem 0 6rem;
 }
 
 .about--container {
@@ -84,7 +84,7 @@
 
 @media (max-width: 44em) {
   .about {
-    padding: 9rem 0.5rem;
+    padding: 12rem 0.5rem 0 0.5rem;
   }
 
   .about--description-box {

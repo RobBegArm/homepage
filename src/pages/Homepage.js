@@ -7,6 +7,7 @@ import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
 import Experience from "../components/Experience/Experience";
+import Work from "../components/Work/Work";
 
 const Homepage = (props) => {
   const [menuIsOpen, setMenuIsOPen] = useState(false);
@@ -43,6 +44,7 @@ const Homepage = (props) => {
         <Hero />
         <About />
         <Experience />
+        <Work />
       </main>
       <Footer />
     </Fragment>
