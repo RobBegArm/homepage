@@ -19,6 +19,8 @@
 
 .experience h3 {
   max-width: 80%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .prof-exp--container {
@@ -30,7 +32,7 @@
 .skills--container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .skill-category-box h4 {
@@ -43,6 +45,13 @@
   background-color: var(--blue-01);
   padding: 2rem 3rem;
   border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: var(--teal-5) 0px 0px 0px 0px;
+}
+
+.skill-category-box:hover {
+  scale: 1.1;
+  box-shadow: var(--teal-7) 0px 0px 0px 4px;
 }
 
 .skill-category-box ul {

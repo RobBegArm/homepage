@@ -38,7 +38,8 @@
 }
 
 .about--education-box h3 {
-  padding-bottom: 2rem;
+  padding: 2rem;
+  padding-top: 0;
   color: var(--teal-5);
 }
 

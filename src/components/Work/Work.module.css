@@ -47,3 +47,9 @@
   margin-left: 1rem;
   font-size: 1.6rem;
 }
+
+@media (max-width: 66em) {
+  .work--container {
+    padding: 0;
+  }
+}
