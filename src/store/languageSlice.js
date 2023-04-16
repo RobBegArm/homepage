@@ -10,6 +10,7 @@ const languageSlice = createSlice({
       if (
         action.payload !== "en" &&
         action.payload !== "ru" &&
+        action.payload !== "est" &&
         action.payload !== "arm"
       ) {
         return;

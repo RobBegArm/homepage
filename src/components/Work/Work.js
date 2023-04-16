@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-// import DropdownTab from "../UI/DropdownTab/DropdownTab";
 import Gallery from "../UI/Gallery/Gallery";
 
 const Work = () => {
@@ -12,24 +11,28 @@ const Work = () => {
     en: "Work",
     ru: "Работа",
     arm: "Աշխատանք",
+    est: "Tööd",
   };
 
   const workHeadline2 = {
     en: "Some of the projects I built",
     ru: "Некоторые из проектов",
     arm: "Իմ գործերից մի քանիսը",
+    est: "Minu projektid",
   };
 
   const projectDescription1 = {
-    en: 'An original website made for the Estonian tech company "E-Pavement" OÜ',
-    ru: 'Оригинальный сайт для эстонской технической компании "E-Pavement" OÜ',
-    arm: "Էստոնական «E-Pavement OÜ» տեխնոլոգիական ընկերության համար ստեղծված օրիգինալ կայք",
+    en: 'An original website made for the Estonian tech company "e-Pavement" OÜ',
+    ru: 'Оригинальный сайт для эстонской технической компании "e-Pavement" OÜ',
+    arm: "Էստոնական «e-Pavement OÜ» տեխնոլոգիական ընկերության համար ստեղծված օրիգինալ կայք",
+    est: 'Originaalne veebileht Eesti tehnoloogiaettevõttele "e-Pavement" OÜ',
   };
 
   const projectDescription2 = {
     en: 'An original website made for "Khnami" palliative care center.',
     ru: 'Оригинальный сайт для центра паллиативной помощи "Хнами".',
     arm: "Օրիգինալ կայք՝ պատրաստված «Խնամի» պալիատիվ խնամքի կենտրոնի համար։",
+    est: 'Originaalne veebileht "Khnami" palliatiivravikeskusele',
   };
 
   return (

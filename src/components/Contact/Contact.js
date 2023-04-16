@@ -10,18 +10,21 @@ const Contact = () => {
     en: "Contact",
     ru: "Контакт",
     arm: "Կապ",
+    est: "Kontaktid",
   };
 
   const contactHeadline2 = {
     en: "Let's have a chat!",
     ru: "Давайте поговорим!",
     arm: "Եկեք զրուցենք:",
+    est: "Võta ühendust!",
   };
 
   const contactDescription = {
     en: "Need help with a website? Have a business proposal in mind? Feel free to reach out using the contact form. I'm here to assist you and explore potential collaborations.",
     ru: "Нужна помощь с сайтом? Есть деловое предложение? Не стесняйтесь связаться с помощью контактной формы. Я здесь, чтобы помочь вам и изучить потенциальные варианты сотрудничества.",
     arm: "Կայքի հետ կապված օգնության կարիք ունե՞ք: Ձեր մտքում բիզնես առաջարկ ունե՞ք: Ազատորեն կապ հաստատեք՝ օգտագործելով կոնտակտային ձևը: Ես այստեղ եմ ձեզ օգնելու և հնարավոր համագործակցությունները բացահայտելու համար:",
+    est: "Vajate abi veebilehega? Teil on äriidee? Võtke julgelt ühendust kasutades kontaktivormi. Olen siin, et teid aidata ja uurida võimalikke koostöövõimalusi.",
   };
 
   return (

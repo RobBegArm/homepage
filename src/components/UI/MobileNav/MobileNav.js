@@ -9,10 +9,30 @@ import { calculateScrollTop } from "../../../hooks/CustomHooks";
 const MobileNav = (props) => {
   const lang = useSelector((state) => state.language.activeLanguage);
 
-  const titleAbout = { en: "About", ru: "Обо мне", arm: "Իմ մասին" };
-  const titleExperience = { en: "Experience", ru: "Опыт", arm: "Փորձ" };
-  const titleWork = { en: "Work", ru: "Работа", arm: "Գործ" };
-  const titleContact = { en: "Contact", ru: "Связь", arm: "Կապ" };
+  const titleAbout = {
+    en: "About",
+    ru: "Обо мне",
+    arm: "Իմ մասին",
+    est: "",
+  };
+  const titleExperience = {
+    en: "Experience",
+    ru: "Опыт",
+    arm: "Փորձ",
+    est: "",
+  };
+  const titleWork = {
+    en: "Work",
+    ru: "Работа",
+    arm: "Գործ",
+    est: "",
+  };
+  const titleContact = {
+    en: "Contact",
+    ru: "Связь",
+    arm: "Կապ",
+    est: "",
+  };
 
   const menuIsOpen = useSelector((state) => state.menu.menuIsOpen);
 

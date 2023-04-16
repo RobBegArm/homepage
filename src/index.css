@@ -41,6 +41,10 @@ body {
   color: var(--teal-5);
 }
 
+h2 {
+  text-transform: uppercase;
+}
+
 /* LISTS */
 
 .list {

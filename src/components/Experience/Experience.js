@@ -11,12 +11,14 @@ const Experience = () => {
     en: "Experience",
     ru: "Опыт",
     arm: "Փորձ",
+    est: "Tööd",
   };
 
   const profExperienceHeadline = {
-    en: "Professional Experience",
-    ru: "Опыт Работы",
-    arm: "Մասնագիտական Փորձ",
+    en: "Professional experience",
+    ru: "Опыт работы",
+    arm: "Մասնագիտական փորձ",
+    est: "Erialane kogemus",
   };
 
   /*JOB 1*/
@@ -25,21 +27,25 @@ const Experience = () => {
     en: "11.2022 - now",
     ru: "11.2022 - сейчас",
     arm: "11.2022 - առայժմ",
+    est: "11.2022 - praeguseni",
   };
   const job1Name = {
     en: "Fullstack Web Developer",
     ru: "Fullstack Веб-Разработчик",
     arm: "Fullstack Վեբ Ծրագրավորող",
+    est: "Fullstack Veb Arendaja",
   };
   const job1Location = {
     en: "Estonia",
     ru: "Эстония",
     arm: "Էստոնիա",
+    est: "Eesti",
   };
   const job1skill1 = {
     en: <p>Website and UI design, SEO and deployment</p>,
     ru: <p>Дизайн веб-сайта и UI, SEO и развертывание</p>,
     arm: <p>Կայքի և UI դիզայն, SEO և տեղակայում</p>,
+    est: <p>Veebilehtede ja kasutajaliidese disain , SEO ja avaldamine</p>,
   };
   const job1skill2 = {
     en: (
@@ -55,6 +61,11 @@ const Experience = () => {
     arm: (
       <p>
         Frontend-ի կառուցում <strong>React JS</strong>-ով
+      </p>
+    ),
+    est: (
+      <p>
+        Frontend-i arendamine <strong>React JS</strong>-iga
       </p>
     ),
   };
@@ -74,6 +85,11 @@ const Experience = () => {
         Backend-ի կառուցում <strong>Spring Boot(Java)/MySQL</strong>-ով
       </p>
     ),
+    est: (
+      <p>
+        Backend-i arendamine <strong>Spring Boot(Java)/MySQL</strong>-iga
+      </p>
+    ),
   };
 
   /*JOB 2*/
@@ -82,26 +98,31 @@ const Experience = () => {
     en: "Khnami Center",
     ru: "Центр Хнами",
     arm: "Խնամի Կենտրոն",
+    est: "Khnami Keskus",
   };
   const job2Headline = {
     en: "Khnami Palliative Care Center",
     ru: "Центр Паллиативной Помощи Хнами",
     arm: "Խնամի Պալիատիվ Խնամքի Կենտրոն",
+    est: "Khnami Palliatiivravi Hoolduskeskus",
   };
   const job2Name = {
     en: "Frontend Web Developer",
     ru: "Frontend Веб-Разработчик",
     arm: "Frontend Վեբ Ծրագրավորող",
+    est: "Frontend Veb Arendaja",
   };
   const job2Location = {
     en: "Estonia",
     ru: "Эстония",
     arm: "Էստոնիա",
+    est: "Eesti",
   };
   const job2skill1 = {
     en: <p>Website design, SEO and deployment</p>,
     ru: <p>Дизайн веб-сайта, SEO и развертывание</p>,
     arm: <p>Կայքի դիզայն, SEO և տեղակայում</p>,
+    est: <p>Veebilehe ja kasutajaliidese disain, SEO ja avaldamine</p>,
   };
   const job2skill2 = {
     en: (
@@ -119,6 +140,11 @@ const Experience = () => {
         Կայք-ի կառուցում <strong>React JS</strong>-ով
       </p>
     ),
+    est: (
+      <p>
+        Veebilehe arendamine <strong>React JS</strong>-iga
+      </p>
+    ),
   };
 
   /* Headline */
@@ -127,6 +153,7 @@ const Experience = () => {
     en: "Technologies",
     ru: "Технологии",
     arm: "Տեխնոլոգիաներ",
+    est: "Tehnoloogiad",
   };
 
   return (

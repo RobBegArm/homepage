@@ -40,6 +40,18 @@ const LangSelectBtn = () => {
             </NavLink>
           </li>
         )}
+        {lang !== "est" && (
+          <li key={"lang-select-est"}>
+            <NavLink to="/est">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/util/est_flag.jpg`}
+                alt={`est flag for language select`}
+                className={classes["language-flag"]}
+                title={"Eesti"}
+              />
+            </NavLink>
+          </li>
+        )}
         {lang !== "arm" && (
           <li key={"lang-select-arm"}>
             <NavLink to="/arm">

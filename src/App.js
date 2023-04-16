@@ -7,9 +7,9 @@ const App = () => {
   return (
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<Homepage activeLang={"en"} />} />
-      <Route path="/ru" element={<Homepage activeLang={"ru"} />} />
       <Route path="/arm" element={<Homepage activeLang={"arm"} />} />
-      {/* <Route path="/en" element={<Homepage activeLang={"en"} />} /> */}
+      <Route path="/est" element={<Homepage activeLang={"est"} />} />
+      <Route path="/ru" element={<Homepage activeLang={"ru"} />} />
       <Route path="/*" element={<Navigate replace to="/" />} />
     </Routes>
   );

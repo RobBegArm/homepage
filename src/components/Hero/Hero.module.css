@@ -21,6 +21,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.8;
 }
 
 .hero--container {
@@ -45,11 +46,12 @@
   -webkit-box-shadow: 0px 0px 0px 2px var(--teal-5);
   -moz-box-shadow: 0px 0px 0px 2px var(--teal-5);
   box-shadow: 0px 0px 0px 2px var(--teal-5);
-  padding: 2rem 3rem;
+  padding: 1rem 4rem;
   max-width: 30rem;
   text-align: center;
   align-self: center;
   background-color: var(--blue-00);
+  line-height: 1.4;
 }
 
 .cta--link:hover,
@@ -79,7 +81,39 @@
 .hero--p3 {
   color: var(--teal-1);
   line-height: 1.4;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* Hint to scroll down */
+
+.hint-box {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  color: var(--teal-5);
+  font-size: 4rem;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+}
+
+.hint-box svg {
+  margin-top: -17px;
+}
+
+.pulse {
+  opacity: 0.3;
+  animation: pulse 1.5s infinite;
+}
+
+.pulse:nth-child(2) {
+  opacity: 0.6;
+  animation-delay: 0.3s;
+}
+
+.pulse:nth-child(3) {
+  opacity: 1;
+  animation-delay: 0.6s;
 }
 
 @media (min-width: 125em) {
@@ -127,36 +161,56 @@
   }
 }
 
-/* Hint to scroll down */
+@media (max-height: 42em) {
+  .hero--container {
+    padding: 3rem 2rem;
+  }
 
-.hint-box {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  color: var(--teal-5);
-  font-size: 4rem;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
+  .hero--p1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h1 {
+    font-size: 3.6rem;
+  }
+
+  .hero--p2 {
+    font-size: 2.1rem;
+  }
+
+  .hero--p3 {
+    font-size: 1.9rem;
+  }
+
+  .hint-box {
+    left: 85%;
+  }
 }
 
-.hint-box svg {
-  margin-top: -17px;
-}
+@media (max-width: 37em) and (max-height: 46em) {
+  .hero--container {
+    padding: 3rem 2rem;
+  }
 
-.pulse {
-  opacity: 0.3;
-  animation: pulse 1.5s infinite;
-}
+  .hero--p1 {
+    font-size: 1.6rem;
+  }
 
-.pulse:nth-child(2) {
-  opacity: 0.6;
-  animation-delay: 0.3s;
-}
+  .hero h1 {
+    font-size: 2.4rem;
+  }
 
-.pulse:nth-child(3) {
-  opacity: 1;
-  animation-delay: 0.6s;
+  .hero--p2 {
+    font-size: 1.8rem;
+  }
+
+  .hero--p3 {
+    font-size: 1.6rem;
+  }
+
+  .cta--link {
+    font-size: 1.6rem;
+  }
 }
 
 @keyframes pulse {

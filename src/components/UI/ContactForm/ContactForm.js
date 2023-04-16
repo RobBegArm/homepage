@@ -140,48 +140,56 @@ const ContactForm = () => {
     en: "Thank You!",
     ru: "Спасибо!",
     arm: "Շնորհակալություն",
+    est: "Aitäh!",
   };
 
   const successResponseMessage = {
     en: "Form submitted successfully! We will reach out to you as soon as possible.",
     ru: "Форма успешно отправлена! Мы свяжемся с вами как можно скорее.",
     arm: "Ձևը հաջողությամբ ուղարկվեց: Մենք կկապվենք Ձեզ հետ որքան հնարավոր է շուտ:",
+    est: "Ankeet edukalt esitatud! Võtame Teiega ühendust esimesel võimalusel.",
   };
 
   const errorResponseTitle = {
     en: "Oops, something went wrong!",
     ru: "Что-то пошло не так!",
     arm: "Ինչ որ բան սխալ գնաց։",
+    est: "Vabandame, midagi läks valesti!",
   };
 
   const errorResponseMessage = {
     en: "Please try again later. Sorry for the inconvenience.",
     ru: "Пожалуйста, повторите попытку позже. Приносим извинения за неудобства.",
     arm: "Խնդրում ենք փորձել մի փոքր ուշ. Ներողություն անհանգստության համար.",
+    est: "Palun proovige hiljem uuesti. Vabandame ebamugavuste pärast.",
   };
 
   const nameLabel = {
     en: "Name",
     ru: "Имя",
     arm: "Անուն",
+    est: "Nimi",
   };
 
   const emailLabel = {
     en: "Email",
     ru: "Почта",
-    arm: "Փոստ",
+    arm: "Էլ․ Փոստ",
+    est: "Email",
   };
 
   const messageLabel = {
     en: "Message",
     ru: "Сообщение",
     arm: "Հաղորդագրություն",
+    est: "Sõnum",
   };
 
   const btnLabel = {
     en: "Submit",
     ru: "Отправить",
     arm: "Ուղարկել",
+    est: "Saada",
   };
 
   return (
