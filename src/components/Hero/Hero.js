@@ -39,19 +39,19 @@ const Hero = () => {
     en: "Robert Beglaryan.",
     ru: "Роберт Бегларян.",
     arm: "Ռոբերտ Բեգլարյան.",
-    est: "Robert Beglaryan",
+    est: "Robert Beglaryan.",
   };
   const heroP2 = {
     en: "I am a passionate web developer.",
     ru: "Я веб разработчик.",
     arm: "Ես վեբ ծրագրավորող եմ:",
-    est: "Mina olen entusiastlik veebiarendaja.",
+    est: "Olen entusiastlik veebiarendaja.",
   };
   const heroP3 = {
     en: "I have experience in designing, building, and deploying websites. I create engaging, responsive, and user-friendly interfaces. I am open for freelance opportunities.",
     ru: "У меня есть опыт проектирования, создания и развертывания веб-сайтов. Я создаю привлекательные, отзывчивые и удобные интерфейсы. Я открыт для фриланса.",
     arm: "Ես ունեմ վեբ կայքերի դիզայնի, կառուցման և տեղադրման փորձ: Ես ստեղծում եմ գրավիչ, responsive և օգտատերի համար հարմար ինտերֆեյսներ: Բաց եմ ֆրիլանսի առաջարկների համար:",
-    est: "Mul on kogemusi veebilehtede kujundamisel, ehitamisel, avaldamine. Mulle meeldib luua reageeriv, huvitav  ja kasutajasõbralikke  liideseid.",
+    est: "Mul on kogemusi veebilehtede kujundamisel, ehitamisel, ja avaldamisel. Mulle meeldib luua reageeriv, huvitav  ja kasutajasõbralikke  liideseid.",
   };
   const heroCta = {
     en: (

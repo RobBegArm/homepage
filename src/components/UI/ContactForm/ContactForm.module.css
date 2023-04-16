@@ -5,18 +5,33 @@
   padding: 2rem 3rem;
 }
 
-.contact-form input {
+input,
+textarea {
   font: inherit;
-  width: 100%;
-  color: #fff;
+  color: var(--teal-0);
   background-color: none;
   background: none;
   border: none;
   outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input {
+  width: 100%;
   -webkit-box-shadow: 0px 1px 0px 0px #fff;
   -moz-box-shadow: 0px 1px 0px 0px #fff;
   box-shadow: 0px 1px 0px 0px #fff;
-  transition: box-shadow 0.3s ease-in-out;
+}
+
+textarea {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 0px 1px #fff;
+  -moz-box-shadow: 0px 0px 0px 1px #fff;
+  box-shadow: 0px 0px 0px 1px #fff;
+  resize: vertical;
+  border-radius: 6px;
+  padding: 1rem;
+  min-height: 15rem;
 }
 
 .form-element {
@@ -25,7 +40,13 @@
   gap: 1rem;
 }
 
-.contact-form input:focus {
+textarea:focus {
+  -webkit-box-shadow: 0px 0px 0px 3px var(--teal-5);
+  -moz-box-shadow: 0px 0px 0px 3px var(--teal-5);
+  box-shadow: 0px 0px 0px 3px var(--teal-5);
+}
+
+input:focus {
   -webkit-box-shadow: 0px 3px 0px 0px var(--teal-5);
   -moz-box-shadow: 0px 3px 0px 0px var(--teal-5);
   box-shadow: 0px 3px 0px 0px var(--teal-5);

@@ -235,12 +235,12 @@ const ContactForm = () => {
         <label htmlFor="message">
           <p>{messageLabel[lang]}</p>
         </label>
-        <input
+        <textarea
           type="text"
           id="message"
           name="message"
           minLength={"3"}
-          maxLength={"300"}
+          maxLength={"1000"}
           className={isLoading ? classes["disabled-input"] : ""}
           disabled={isLoading}
           ref={messageInputRef}
