@@ -94,9 +94,9 @@ const Experience = () => {
     arm: "Frontend Վեբ Ծրագրավորող",
   };
   const job2Location = {
-    en: "Armenia",
-    ru: "Армения",
-    arm: "Հայաստան",
+    en: "Estonia",
+    ru: "Эстония",
+    arm: "Էստոնիա",
   };
   const job2skill1 = {
     en: <p>Website design, SEO and deployment</p>,

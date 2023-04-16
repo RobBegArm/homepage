@@ -12,15 +12,31 @@ const ContactForm = () => {
 
   const formRef = useRef();
 
+  const nameInputRef = useRef();
+  const emailInputRef = useRef();
+  const messageInputRef = useRef();
+
+  /* FORM */
+
   async function formSubmitHandler(e) {
     e.preventDefault();
+    const correctNameInput = checkNameInput(nameInputRef.current.value.trim());
+    const correctEmailInput = checkEmailInput(
+      emailInputRef.current.value.trim()
+    );
+    const correctMessageInput = checkMessageInput(
+      messageInputRef.current.value.trim()
+    );
+    if (!correctNameInput || !correctEmailInput || !correctMessageInput) {
+      return;
+    }
     try {
       setIsLoading(true);
       const response = await emailjs.sendForm(
-        "service_3uejmmj",
-        "template_j70pmqy",
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         formRef.current,
-        "uNwEU8kokrc1FzHXY"
+        process.env.REACT_APP_PUBLIC_KEY
       );
       // console.log(response);
       if (response.status === 200) {
@@ -43,6 +59,82 @@ const ContactForm = () => {
       setIsLoading(false);
     }
   }
+
+  /* VALIDATION */
+
+  const checkNameInput = (name) => {
+    if (name.length <= 2) {
+      swal({
+        title: "Please provide a valid input!",
+        text: "name should be longer than 2 characters!",
+        icon: "warning",
+        button: "Ok",
+      });
+      return false;
+    }
+    if (name.length > 40) {
+      swal({
+        title: "Please provide a valid input!",
+        text: "name should not be longer than 40 characters!",
+        icon: "warning",
+        button: "Ok",
+      });
+      return false;
+    }
+    const regexName = /^[a-zA-ZüÜõÕöÖäÄžŽšŠ]+[a-zA-ZüÜõÕöÖäÄžŽšŠ]+$/;
+    const regexNameAndSurname = /^[a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+$/;
+    const regexNameAnd2Surnames =
+      /^[a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+$/;
+    const regexNameAnd3Surnames =
+      /^[a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+$/;
+    if (
+      !(
+        regexName.test(name) ||
+        regexNameAndSurname.test(name) ||
+        regexNameAnd2Surnames.test(name) ||
+        regexNameAnd3Surnames.test(name)
+      )
+    ) {
+      swal({
+        title: "Please provide a valid input!",
+        text: "Name should contain latin letters and no special characters or numbers!",
+        icon: "warning",
+        button: "Ok",
+      });
+      return false;
+    }
+    return true;
+  };
+
+  const checkEmailInput = (email) => {
+    const regexEmail =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (!regexEmail.test(email)) {
+      swal({
+        title: "Please provide a valid input!",
+        text: "E-mail Input is invalid!",
+        icon: "warning",
+        button: "Ok",
+      });
+      return false;
+    }
+    return true;
+  };
+
+  const checkMessageInput = (message) => {
+    if (message.length > 2000) {
+      swal({
+        title: "Please provide a valid input!",
+        text: "Message input should not be longer than 2000 characters!",
+        icon: "warning",
+        button: "Ok",
+      });
+      return false;
+    }
+    return true;
+  };
+
+  /* TEXT */
 
   const successResponseTitle = {
     en: "Thank You!",
@@ -108,9 +200,10 @@ const ContactForm = () => {
           id="name"
           name="name"
           minLength={"3"}
-          maxLength={"60"}
+          maxLength={"40"}
           className={isLoading ? classes["disabled-input"] : ""}
           disabled={isLoading}
+          ref={nameInputRef}
           required
         />
       </div>
@@ -126,6 +219,7 @@ const ContactForm = () => {
           maxLength={"60"}
           className={isLoading ? classes["disabled-input"] : ""}
           disabled={isLoading}
+          ref={emailInputRef}
           required
         />
       </div>
@@ -141,6 +235,7 @@ const ContactForm = () => {
           maxLength={"300"}
           className={isLoading ? classes["disabled-input"] : ""}
           disabled={isLoading}
+          ref={messageInputRef}
           required
         />
       </div>

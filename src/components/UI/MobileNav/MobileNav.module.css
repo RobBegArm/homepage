@@ -10,7 +10,9 @@
 }
 
 .mobile-nav {
-  background-color: var(--blue-02);
+  background-color: rgb(7, 30, 51, 0.9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   position: absolute;
   top: 0;
   left: 0;
@@ -21,7 +23,7 @@
   justify-content: center;
   gap: 5rem;
   pointer-events: none;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-size: 4rem;
   font-weight: 700;
 }

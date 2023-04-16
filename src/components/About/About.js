@@ -12,14 +12,14 @@ const About = () => {
     arm: "Իմ մասին",
   };
   const aboutText1 = {
-    en: "I am a passionate web developer based in Tallinn, Estonia with extensive experience in designing, building, and deploying modern websites. I specialize in using React JS, JavaScript (ES6), HTML5, and CSS3 to create engaging and responsive websites.",
-    ru: "Я веб разработчик, базирующийся в Таллинне, Эстонии, с большим опытом проектирования, создания и развертывания современный веб-сайтов. Я специализируюсь на использовании React JS, JavaScript (ES6), HTML5 и CSS3 для создания привлекательных и отзывчивых веб-сайтов. ",
-    arm: "Ես վեբ ծրագրավորող եմ, որը հիմնված է Տալլինում, Էստոնիա, որն ունի ժամանակակից կայքերի նախագծման, կառուցման և տեղադրման մեծ փորձ: Ես մասնագիտացած եմ React JS-ի, JavaScript-ի (ES6), HTML5-ի և CSS3-ի օգտագործման մեջ՝ գրավիչ և արձագանքող կայքեր ստեղծելու համար:",
+    en: "I am a passionate web developer based in Tallinn, Estonia with experience in designing, building, and deploying modern websites. I specialize in using React JS, JavaScript (ES6), HTML5, and CSS3 to create engaging and responsive websites.",
+    ru: "Я веб разработчик, из в Таллинна, Эстонии, с опытом проектирования, создания и развертывания современный веб-сайтов. Я специализируюсь на использовании React JS, JavaScript (ES6), HTML5 и CSS3 для создания привлекательных и отзывчивых веб-сайтов.",
+    arm: "Ես վեբ ծրագրավորող եմ, և ունեմ ժամանակակից կայքերի նախագծման, կառուցման և տեղադրման փորձ: Ես մասնագիտացած եմ React JS-ի, JavaScript-ի (ES6), HTML5-ի և CSS3-ի օգտագործման մեջ՝ գրավիչ և responsive կայքեր ստեղծելու նպատակով:",
   };
   const aboutText2 = {
-    en: "With a passion for staying up-to-date with the latest web development trends and technologies, I enjoy creating user-friendly interfaces that provide a seamless user experience. I take pride in my work and am committed to delivering high-quality websites that exceed my clients' expectations.",
-    ru: "Стремясь быть в курсе последних тенденций и технологий веб-разработки, мне нравится создавать удобные интерфейсы, обеспечивающие беспрепятственный пользовательский опыт. Я горжусь своей работой и стремлюсь создавать высококачественные веб-сайты, превосходящие ожидания моих клиентов.",
-    arm: "Ցանկանալով արդի մնալ վեբ զարգացման վերջին միտումներին և տեխնոլոգիաներին, ես հաճույք եմ ստանում ստեղծելու համար հարմար ինտերֆեյսներ, որոնք ապահովում են օգտատերերի անխափան փորձը: Ես հպարտ եմ իմ աշխատանքով և պարտավորվում եմ տրամադրել բարձրորակ կայքեր, որոնք գերազանցում են իմ հաճախորդների սպասելիքները:",
+    en: "I enjoy creating user-friendly interfaces that provide a seamless user experience and hava a passion for staying up-to-date with the latest web development trends and technologies. I take pride in my work and am committed to delivering high-quality websites that exceed my clients' expectations.",
+    ru: "Мне нравится создавать удобные интерфейсы, обеспечивающие беспрепятственный пользовательский опыт, и я всегда стремлюсь быть в курсе последних трендов и технологий веб-разработки. Я горжусь своей работой и стремлюсь создавать высококачественные веб-сайты, превосходящие ожидания моих клиентов.",
+    arm: "Ես հաճույք եմ ստանում օգտատերերի համար հարմար ինտերֆեյսներ ստեղծելուց, և ցանկանալում եմ միշտ արդի մնալ վեբ ծրագրավորման վերջին թրենդներին և տեխնոլոգիաներին: Ես հպարտ եմ իմ աշխատանքով և պարտավորվում եմ տրամադրել բարձրորակ կայքեր, որոնք գերազանցում են իմ հաճախորդների սպասելիքները:",
   };
   const educationHeadline = {
     en: "Education",

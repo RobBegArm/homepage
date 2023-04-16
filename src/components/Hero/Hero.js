@@ -47,7 +47,7 @@ const Hero = () => {
   const heroP3 = {
     en: "I have experience in designing, building, and deploying websites. I create engaging, responsive, and user-friendly interfaces. I am open for freelance opportunities.",
     ru: "У меня есть опыт проектирования, создания и развертывания веб-сайтов. Я создаю привлекательные, отзывчивые и удобные интерфейсы. Я открыт для фриланса.",
-    arm: "Ես վեբ կայքերի դիզայնի, կառուցման և տեղադրման փորձ ունեմ: Ես ստեղծում եմ գրավիչ, responsive և օգտատերի համար հարմար ինտերֆեյսներ: Ես բաց եմ ֆրիլանսի առաջարկների համար:",
+    arm: "Ես ունեմ վեբ կայքերի դիզայնի, կառուցման և տեղադրման փորձ: Ես ստեղծում եմ գրավիչ, responsive և օգտատերի համար հարմար ինտերֆեյսներ: Բաց եմ ֆրիլանսի առաջարկների համար:",
   };
   const heroCta = {
     en: "Interested? Contact Me!",
