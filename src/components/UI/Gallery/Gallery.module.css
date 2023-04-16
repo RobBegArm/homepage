@@ -1,0 +1,89 @@
+.gallery-element {
+  position: relative;
+}
+
+.gallery-btn-left,
+.gallery-btn-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-img-box {
+  width: 100rem;
+  min-height: 60rem;
+}
+
+.gallery-btn-left,
+.gallery-btn-right {
+  background: none;
+  color: var(--teal-5);
+  font-size: 5rem;
+  position: absolute;
+  top: 45%;
+}
+
+.gallery-btn-left:hover,
+.gallery-btn-right:hover {
+  color: var(--teal-7);
+  cursor: pointer;
+}
+
+.gallery-btn-left svg,
+.gallery-btn-right svg {
+  stroke-width: 0.7;
+}
+
+.gallery-btn-left {
+  left: 3%;
+}
+
+.gallery-btn-right {
+  right: 3%;
+}
+
+.gallery-nav-bullets {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--teal-5);
+}
+
+.gallery-nav-bullets li:hover {
+  cursor: pointer;
+  color: var(--teal-7);
+}
+
+@media (max-width: 65em) {
+  .gallery-nav-bullets {
+    gap: 1.5rem;
+  }
+
+  .gallery-img-box {
+    max-width: 95vw;
+    min-height: 60vw;
+  }
+
+  .gallery-btn-left,
+  .gallery-btn-right {
+    top: 23vw;
+  }
+
+  .gallery-btn-left svg,
+  .gallery-btn-right svg {
+    stroke-width: 0.2;
+  }
+}
+
+@media (max-width: 35em) {
+  .gallery-btn-left,
+  .gallery-btn-right {
+    font-size: 4rem;
+  }
+
+  .gallery-nav-bullets {
+    font-size: 1.8rem;
+  }
+}

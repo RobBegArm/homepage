@@ -1,5 +1,10 @@
 import classes from "./Footer.module.css";
-import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
+import {
+  AiOutlineGithub,
+  AiFillLinkedin,
+  AiOutlineMail,
+  AiOutlinePhone,
+} from "react-icons/ai";
 
 const Footer = () => {
   let year = new Date().getFullYear().toString();
@@ -15,6 +20,7 @@ const Footer = () => {
           title="LinkedIn"
         >
           <AiFillLinkedin />
+          <p>linkedin.com/in/robbegarm</p>
         </a>
         <a
           href="https://github.com/RobBegArm"
@@ -24,6 +30,27 @@ const Footer = () => {
           title="GitHub"
         >
           <AiOutlineGithub />
+          <p>github.com/RobBegArm</p>
+        </a>
+        <a
+          href="mailto:robbegarm@gmail.com?subject=Contact From Website"
+          target={"_blank"}
+          rel={"noreferrer"}
+          className={`link ${classes["social-link"]}`}
+          title="Mail"
+        >
+          <AiOutlineMail />
+          <p>robbegarm@gmail.com</p>
+        </a>
+        <a
+          href="tel:+37256804966"
+          target={"_blank"}
+          rel={"noreferrer"}
+          className={`link ${classes["social-link"]}`}
+          title="Phone"
+        >
+          <AiOutlinePhone />
+          <p>+37256804966</p>
         </a>
       </div>
       <p>{year} &#169; RobBegArm </p>

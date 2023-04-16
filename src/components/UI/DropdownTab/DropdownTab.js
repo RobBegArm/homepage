@@ -1,6 +1,7 @@
 import classes from "./DropdownTab.module.css";
 import { useState } from "react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import { GoPrimitiveDot } from "react-icons/go";
 import Picture from "../Picture/Picture";
 
 const DropdownTab = (props) => {
@@ -11,19 +12,16 @@ const DropdownTab = (props) => {
   };
 
   return (
-    <div className={classes["dropdown-tab"]}>
+    <div className={classes["dropdown-tab"]} onClick={toggleTab}>
       <div className={classes["main-tab"]}>
         {dropdownTabOpen ? (
-          <BsChevronUp onClick={toggleTab} className={classes["chevron-up"]} />
+          <BsChevronUp className={classes["chevron-up"]} />
         ) : (
-          <BsChevronDown
-            onClick={toggleTab}
-            className={classes["chevron-down"]}
-          />
+          <BsChevronDown className={classes["chevron-down"]} />
         )}
         <Picture
           imgName={props.imgName}
-          imgFolder="about"
+          imgFolder={props.imgFolder}
           imgAlt={props.imgAlt}
           imgClasses={classes["about-logo"]}
         />
@@ -42,9 +40,31 @@ const DropdownTab = (props) => {
         </p>
         <p>{props.dropdownLocation}</p>
         <p className={classes["dropdown-years"]}>{props.dropdownYears}</p>
-        <p className={classes["dropdown-description"]}>
-          {props.dropdownDescription}
-        </p>
+        {props.dropdownDescription && (
+          <p className={classes["dropdown-description"]}>
+            {props.dropdownDescription}
+          </p>
+        )}
+        {props.skill1 && (
+          <ul>
+            <li key={`skill_1_key_${props.imgName}`}>
+              <GoPrimitiveDot className={classes["li-icon"]} />
+              {props.skill1}
+            </li>
+            {props.skill2 && (
+              <li key={`skill_2_key_${props.imgName}`}>
+                <GoPrimitiveDot className={classes["li-icon"]} />
+                {props.skill2}
+              </li>
+            )}
+            {props.skill3 && (
+              <li key={`skill_3_key_${props.imgName}`}>
+                <GoPrimitiveDot className={classes["li-icon"]} />
+                {props.skill3}
+              </li>
+            )}
+          </ul>
+        )}
       </div>
     </div>
   );

@@ -1,19 +1,27 @@
 footer,
-.social-container,
 .social-container a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+}
+
+.social-container a {
+  gap: 0.5rem;
 }
 
 footer {
-  background-color: var(--blue-00);
+  background-color: var(--blue-02);
   color: var(--teal-5);
   flex-direction: column;
   overflow: hidden;
   padding: 4rem;
   border-top: 1px solid var(--teal-5);
+  gap: 5rem;
+}
+
+.social-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .social-container {
@@ -25,6 +33,27 @@ footer {
   color: inherit;
 }
 
+.social-link p {
+  font-size: 1.6rem;
+}
+
 .social-link:hover {
   color: var(--teal-7);
+  scale: 1.04;
+}
+
+@media (max-width: 79em) {
+  .social-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 44em) {
+  .social-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .social-link p {
+    font-size: 1.4rem;
+  }
 }

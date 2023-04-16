@@ -1,21 +1,60 @@
 import classes from "./Header.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { FiMenu } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
 
+import { menuActions } from "../../store/menuSlice";
+
 import HeaderNavLink from "../UI/HeaderNavLink/HeaderNavLink";
 import LangSelectBtn from "../UI/LangSelectBtn/LangSelectBtn";
 
-const Header = (props) => {
+const Header = () => {
   const lang = useSelector((state) => state.language.activeLanguage);
 
-  const resumeBtnTitle = { en: "Resume", ru: "Резюме", arm: "Ռեզյումե" };
+  const resumeBtnTitle = {
+    en: "Resume",
+    ru: "Резюме",
+    arm: "Ռեզյումե",
+    est: "CV",
+  };
 
-  const titleAbout = { en: "About", ru: "Обо мне", arm: "Իմ մասին" };
-  const titleExperience = { en: "Experience", ru: "Опыт", arm: "Փորձ" };
-  const titleWork = { en: "Work", ru: "Работа", arm: "Գործ" };
-  const titleContact = { en: "Contact", ru: "Связь", arm: "Կապ" };
+  const titleAbout = {
+    en: "About",
+    ru: "Обо мне",
+    arm: "Իմ մասին",
+    est: "Minust",
+  };
+  const titleExperience = {
+    en: "Experience",
+    ru: "Опыт",
+    arm: "Փորձ",
+    est: "Kogemus",
+  };
+  const titleWork = {
+    en: "Work",
+    ru: "Работа",
+    arm: "Գործ",
+    est: "Tööd",
+  };
+  const titleContact = {
+    en: "Contact",
+    ru: "Связь",
+    arm: "Կապ",
+    est: "Kontaktid",
+  };
+
+  const menuIsOpen = useSelector((state) => state.menu.menuIsOpen);
+
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = () => {
+    dispatch(menuActions.setMenuStateIsOpen(!menuIsOpen));
+  };
+
+  const closeMenuHandler = () => {
+    dispatch(menuActions.closeMenu());
+  };
 
   return (
     <header className={`${classes["header"]} sticky`} id="header">
@@ -25,6 +64,7 @@ const Header = (props) => {
             src={`${process.env.PUBLIC_URL}/images/util/RB_logo.svg`}
             alt={"Robert Beglaryan Logo"}
             className={classes["logo-image"]}
+            onClick={closeMenuHandler}
           />
         </HeaderNavLink>
         <nav className={classes["header--nav"]}>
@@ -46,9 +86,9 @@ const Header = (props) => {
         </div>
         <button
           className={`btn ${classes["btn--menu"]}`}
-          onClick={props.changeMenuState}
+          onClick={toggleMenuHandler}
         >
-          {props.menuIsOpen ? <MdOutlineClose /> : <FiMenu />}
+          {menuIsOpen ? <MdOutlineClose /> : <FiMenu />}
         </button>
       </div>
     </header>
