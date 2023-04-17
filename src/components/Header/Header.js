@@ -75,7 +75,7 @@ const Header = () => {
         </nav>
         <div className={classes["header--cta"]}>
           <a
-            href="/CV_Robert_Beglaryan.pdf"
+            href="https://robbegarm.github.io/homepage/CV_Robert_Beglaryan.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={`${classes["resume-btn-link"]} link`}
