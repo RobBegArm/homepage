@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Robert_Beglaryan_Website/static/css/main.863b03a2.css",
-    "main.js": "/Robert_Beglaryan_Website/static/js/main.68036edc.js",
-    "static/media/hero_bg.jpg": "/Robert_Beglaryan_Website/static/media/hero_bg.e205486cc75ad5d9553b.jpg",
-    "index.html": "/Robert_Beglaryan_Website/index.html",
-    "main.863b03a2.css.map": "/Robert_Beglaryan_Website/static/css/main.863b03a2.css.map",
-    "main.68036edc.js.map": "/Robert_Beglaryan_Website/static/js/main.68036edc.js.map"
+    "main.css": "/homepage/static/css/main.f3b93bc8.css",
+    "main.js": "/homepage/static/js/main.c167545e.js",
+    "static/media/hero_bg.jpg": "/homepage/static/media/hero_bg.e205486cc75ad5d9553b.jpg",
+    "index.html": "/homepage/index.html",
+    "main.f3b93bc8.css.map": "/homepage/static/css/main.f3b93bc8.css.map",
+    "main.c167545e.js.map": "/homepage/static/js/main.c167545e.js.map"
   },
   "entrypoints": [
-    "static/css/main.863b03a2.css",
-    "static/js/main.68036edc.js"
+    "static/css/main.f3b93bc8.css",
+    "static/js/main.c167545e.js"
   ]
 }
