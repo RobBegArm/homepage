@@ -11,7 +11,7 @@ const Experience = () => {
     en: "Experience",
     ru: "Опыт",
     arm: "Փորձ",
-    est: "Tööd",
+    est: "Kogemus",
   };
 
   const profExperienceHeadline = {
