@@ -1,20 +1,15 @@
 import classes from "./ContactForm.module.css";
 
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 import swal from "sweetalert";
 import { useSelector } from "react-redux";
 
+import { useForm } from "@formspree/react";
+
 const ContactForm = () => {
-  emailjs.init(
-    process.env.REACT_APP_SERVICE_ID,
-    process.env.REACT_APP_PUBLIC_KEY
-  );
   const lang = useSelector((state) => state.language.activeLanguage);
 
-  const [isLoading, setIsLoading] = useState(false);
-
-  const formRef = useRef();
+  const [state, handleSubmit] = useForm("xrgvonbv");
 
   const nameInputRef = useRef();
   const emailInputRef = useRef();
@@ -35,15 +30,8 @@ const ContactForm = () => {
       return;
     }
     try {
-      setIsLoading(true);
-      const response = await emailjs.sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        formRef.current,
-        process.env.REACT_APP_PUBLIC_KEY
-      );
-      // console.log(response);
-      if (response.status === 200) {
+      const response = await handleSubmit(e);
+      if (state.succeeded && response.response.status === 200) {
         swal({
           title: successResponseTitle[lang],
           text: successResponseMessage[lang],
@@ -51,16 +39,16 @@ const ContactForm = () => {
           button: "Ok",
         });
         e.target.reset();
-        setIsLoading(false);
       }
     } catch (error) {
       swal({
         title: errorResponseTitle[lang],
-        text: `${errorResponseMessage[lang]} | ${error.message || error.text}`,
+        text: `${errorResponseMessage[lang]} | ${
+          state.errors["message"] || error.message || error.text
+        }`,
         icon: "error",
         button: "Ok",
       });
-      setIsLoading(false);
     }
   }
 
@@ -201,7 +189,6 @@ const ContactForm = () => {
       className={classes["contact-form"]}
       name="contact-form"
       onSubmit={formSubmitHandler}
-      ref={formRef}
     >
       <div className={classes["form-element"]}>
         <label htmlFor="name">
@@ -213,8 +200,8 @@ const ContactForm = () => {
           name="name"
           minLength={"3"}
           maxLength={"40"}
-          className={isLoading ? classes["disabled-input"] : ""}
-          disabled={isLoading}
+          className={state.submitting ? classes["disabled-input"] : ""}
+          disabled={state.submitting}
           ref={nameInputRef}
           required
         />
@@ -229,8 +216,8 @@ const ContactForm = () => {
           name="email"
           minLength={"3"}
           maxLength={"60"}
-          className={isLoading ? classes["disabled-input"] : ""}
-          disabled={isLoading}
+          className={state.submitting ? classes["disabled-input"] : ""}
+          disabled={state.submitting}
           ref={emailInputRef}
           required
         />
@@ -244,9 +231,9 @@ const ContactForm = () => {
           id="message"
           name="message"
           minLength={"3"}
-          maxLength={"1000"}
-          className={isLoading ? classes["disabled-input"] : ""}
-          disabled={isLoading}
+          maxLength={"2000"}
+          className={state.submitting ? classes["disabled-input"] : ""}
+          disabled={state.submitting}
           ref={messageInputRef}
           required
         />
@@ -254,11 +241,11 @@ const ContactForm = () => {
       <button
         type="submit"
         className={`btn ${classes["form-btn"]} ${
-          isLoading ? classes["disabled-input"] : ""
+          state.submitting ? classes["disabled-input"] : ""
         }`}
-        disabled={isLoading}
+        disabled={state.submitting}
       >
-        <p>{isLoading ? "..." : btnLabel[lang]}</p>
+        <p>{state.submitting ? "..." : btnLabel[lang]}</p>
       </button>
     </form>
   );
