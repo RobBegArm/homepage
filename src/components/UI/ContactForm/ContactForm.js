@@ -18,20 +18,17 @@ const ContactForm = () => {
   /* FORM */
 
   async function formSubmitHandler(e) {
-    e.preventDefault();
-    const correctNameInput = checkNameInput(nameInputRef.current.value.trim());
-    const correctEmailInput = checkEmailInput(
-      emailInputRef.current.value.trim()
-    );
-    const correctMessageInput = checkMessageInput(
-      messageInputRef.current.value.trim()
-    );
-    if (!correctNameInput || !correctEmailInput || !correctMessageInput) {
+    if (
+      !checkNameInput(nameInputRef.current.value.trim()) ||
+      !checkEmailInput(emailInputRef.current.value.trim()) ||
+      !checkMessageInput(messageInputRef.current.value.trim())
+    ) {
       return;
     }
     try {
       const response = await handleSubmit(e);
-      if (state.succeeded && response.response.status === 200) {
+      // console.log(response);
+      if (state.succeeded || response.response.status === 200) {
         swal({
           title: successResponseTitle[lang],
           text: successResponseMessage[lang],
@@ -39,6 +36,17 @@ const ContactForm = () => {
           button: "Ok",
         });
         e.target.reset();
+      } else {
+        const iconType = response.response.status === 422 ? "warning" : "error";
+        swal({
+          title: errorResponseTitle[lang],
+          text: `${errorResponseMessage[lang]}
+          Status Code: ${response.response.status} 
+          Error Type: ${response.body.error}
+          Message: ${response.body.errors[0].message}`,
+          icon: iconType,
+          button: "Ok",
+        });
       }
     } catch (error) {
       swal({
@@ -73,23 +81,12 @@ const ContactForm = () => {
       });
       return false;
     }
-    const regexName = /^[a-zA-ZüÜõÕöÖäÄžŽšŠ]+[a-zA-ZüÜõÕöÖäÄžŽšŠ]+$/;
-    const regexNameAndSurname = /^[a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+$/;
-    const regexNameAnd2Surnames =
-      /^[a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+$/;
-    const regexNameAnd3Surnames =
-      /^[a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+ [a-zA-ZüÜõÕöÖäÄžŽšŠ]+$/;
-    if (
-      !(
-        regexName.test(name) ||
-        regexNameAndSurname.test(name) ||
-        regexNameAnd2Surnames.test(name) ||
-        regexNameAnd3Surnames.test(name)
-      )
-    ) {
+
+    const regexName = /[0-9.,]+/;
+    if (regexName.test(name)) {
       swal({
         title: "Please provide a valid input!",
-        text: "Name should contain latin letters and no special characters or numbers!",
+        text: "Name should contain latin letters and no numbers!",
         icon: "warning",
         button: "Ok",
       });
