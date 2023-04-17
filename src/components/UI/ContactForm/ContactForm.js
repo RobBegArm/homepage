@@ -6,6 +6,10 @@ import swal from "sweetalert";
 import { useSelector } from "react-redux";
 
 const ContactForm = () => {
+  emailjs.init(
+    process.env.REACT_APP_SERVICE_ID,
+    process.env.REACT_APP_PUBLIC_KEY
+  );
   const lang = useSelector((state) => state.language.activeLanguage);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -52,7 +56,7 @@ const ContactForm = () => {
     } catch (error) {
       swal({
         title: errorResponseTitle[lang],
-        text: `${errorResponseMessage[lang]} | ${error.message}`,
+        text: `${errorResponseMessage[lang]} | ${error.message || error.text}`,
         icon: "error",
         button: "Ok",
       });
