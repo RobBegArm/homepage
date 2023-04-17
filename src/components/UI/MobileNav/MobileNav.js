@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 
 import { calculateScrollTop } from "../../../hooks/CustomHooks";
 
+import LangSelectBtn from "../LangSelectBtn/LangSelectBtn";
+
 const MobileNav = (props) => {
   const lang = useSelector((state) => state.language.activeLanguage);
 
@@ -13,25 +15,25 @@ const MobileNav = (props) => {
     en: "About",
     ru: "Обо мне",
     arm: "Իմ մասին",
-    est: "",
+    est: "Minust",
   };
   const titleExperience = {
     en: "Experience",
     ru: "Опыт",
     arm: "Փորձ",
-    est: "",
+    est: "Kogemus",
   };
   const titleWork = {
     en: "Work",
     ru: "Работа",
     arm: "Գործ",
-    est: "",
+    est: "Tööd",
   };
   const titleContact = {
     en: "Contact",
     ru: "Связь",
     arm: "Կապ",
-    est: "",
+    est: "Kontaktid",
   };
 
   const menuIsOpen = useSelector((state) => state.menu.menuIsOpen);
@@ -47,6 +49,7 @@ const MobileNav = (props) => {
       <MobileNavLink href="#experience" title={titleExperience[lang]} />
       <MobileNavLink href="#work" title={titleWork[lang]} />
       <MobileNavLink href="#contact" title={titleContact[lang]} />
+      <LangSelectBtn />
     </nav>
   );
 };

@@ -30,7 +30,7 @@
   padding: 0.8rem;
 }
 
-.lang-select-box:hover {
+.lang-select-box-active {
   background-color: #212d36;
 }
 

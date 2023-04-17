@@ -14,7 +14,7 @@ const About = () => {
   };
   const aboutText1 = {
     en: "I am a passionate web developer based in Tallinn, Estonia with experience in designing, building, and deploying modern websites. I specialize in using React JS, JavaScript (ES6), HTML5, and CSS3 to create engaging and responsive websites.",
-    ru: "Я веб разработчик, из в Таллинна, Эстонии, с опытом проектирования, создания и развертывания современный веб-сайтов. Я специализируюсь на использовании React JS, JavaScript (ES6), HTML5 и CSS3 для создания привлекательных и отзывчивых веб-сайтов.",
+    ru: "Я веб разработчик с опытом проектирования, создания и развертывания современный веб-сайтов. Я специализируюсь в использовании React JS, JavaScript (ES6), HTML5 и CSS3 для создания привлекательных и отзывчивых веб-сайтов.",
     arm: "Ես վեբ ծրագրավորող եմ, և ունեմ ժամանակակից կայքերի նախագծման, կառուցման և տեղադրման փորձ: Ես մասնագիտացած եմ React JS-ի, JavaScript-ի (ES6), HTML5-ի և CSS3-ի օգտագործման մեջ՝ գրավիչ և responsive կայքեր ստեղծելու նպատակով:",
     est: "Olen kaasaegsete veebisaitide kujundamise, loomise ning avaldamise kogemusega veebiarendaja. Olen spetsialiseerunud reageerivate, huvitavate ja kasutajasõbralike veebisaitide loomisele, kasutades React JS, JavaScript (ES6), HTML5, ja CSS3.",
   };

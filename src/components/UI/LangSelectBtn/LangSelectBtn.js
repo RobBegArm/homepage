@@ -9,13 +9,22 @@ const LangSelectBtn = () => {
 
   const [dropMenuOpen, setDropMenuOpen] = useState(false);
 
+  const toggleMenuHandler = () => {
+    setDropMenuOpen(!dropMenuOpen);
+  };
+
   return (
     <div
       className={classes["lang-select-box"]}
       onMouseEnter={() => setDropMenuOpen(true)}
       onMouseLeave={() => setDropMenuOpen(false)}
+      onClick={toggleMenuHandler}
     >
-      <div className={classes["lang-select-selector"]}>
+      <div
+        className={`${classes["lang-select-selector"]} ${
+          dropMenuOpen ? classes["lang-select-box-active"] : ""
+        }`}
+      >
         <img
           src={`${process.env.PUBLIC_URL}/images/util/${lang}_flag.jpg`}
           alt={`${lang} flag for language select`}
