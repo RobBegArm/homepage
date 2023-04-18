@@ -3,12 +3,12 @@
   "short_name": "Robert Beglaryan Website",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "https://robbegarm.github.io/homepage/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "https://robbegarm.github.io/homepage/android-chrome-192x192.png/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
