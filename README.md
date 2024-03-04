@@ -1,4 +1,4 @@
-## [Robert Beglaryan's Portfolio-Website](https://www.khnami-center.com/en)
+## [Robert Beglaryan's Portfolio-Website](https://robbegarm.github.io/homepage/)
 
 Portfolio website. Built with React JS.
 - Website design
